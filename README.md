@@ -1,7 +1,12 @@
 # README
 
-This README documents whatever steps are necessary to get the
-application up and running.
+This is the Ruby on Rails backend for the demo app of a full-stack kanban board from [woetflow.com](https://woetflow.com/)
+
+## Demo
+[Demo full-stack Kanban Board](https://woetflow-demo-kanban-board.netlify.app/#/)
+
+## Blog
+This project is used in the blog post ["Creating a full-stack kanban board: the Ruby on Rails API backend"](https://woetflow.com/posts/creating-a-full-stack-kanban-board-the-ruby-on-rails-api-backend)
 
 ## Ruby version
 Ruby 2.7.2
@@ -44,7 +49,7 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: barry
+  username: name
   password: <%= ENV['WOETFLOW_DEMO_KANBAN_BOARD_DATABASE_PASSWORD'] %>
 
 development:
