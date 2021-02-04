@@ -44,7 +44,7 @@ users = [
   },
   {
     label: "Indro Warkop",
-    value: "https://pickaface.net/galle,ry/avatar/Opi51c7dccf270e0.png"
+    value: "https://pickaface.net/gallery/avatar/technostar2651dbbe73a502d.png"
   },
   {
     label: "Vincent Chase",
@@ -64,98 +64,6 @@ users = [
   }
 ]
 
-cards = [
-  {
-    title: "Add discount code to checkout page",
-    date: "2020-12-14",
-    tag: "Feature Request",
-    column_id: 1,
-    user_id: 2
-  },
-  {
-    title: "Provide documentation on integrations",
-    date: "2021-01-12",
-    tag: "Backend",
-    column_id: 1,
-    user_id: 3
-  },
-  {
-    title: "Design shopping cart dropdown",
-    date: "2021-01-09",
-    tag: "Design",
-    column_id: 1,
-    user_id: 1
-  },
-  {
-    title: "Test checkout flow",
-    date: "2021-09-15",
-    tag: "QA",
-    column_id: 1,
-    user_id: 7
-  },
-  {
-    title: "Design wishlist overview",
-    date: "2021-01-09",
-    tag: "Design",
-    column_id: 2,
-    user_id: 5
-  },
-  {
-    title: "Add paypal as a payment provider",
-    date: "2021-01-14",
-    column_id: 2,
-    user_id: 4
-  },
-  {
-    title: "Update documentation on products endpoint",
-    date: "2021-01-19",
-    tag: "Backend",
-    column_id: 2,
-    user_id: 3
-  },
-  {
-    title: "Design products carousel",
-    date: "2021-01-10",
-    tag: "Design",
-    column_id: 3,
-    user_id: 6
-  },
-  {
-    title: "Add related products section",
-    date: "2021-01-14",
-    tag: "Feature Request",
-    column_id: 3,
-    user_id: 4
-  },
-  {
-    title: "Design wishlist dropdown",
-    date: "2021-01-09",
-    tag: "Design",
-    column_id: 4,
-    user_id: 3
-  },
-  {
-    title: "Add new properties to products endpoint",
-    date: "2021-01-14",
-    tag: "Backend",
-    column_id: 4,
-    user_id: 7
-  },
-  {
-    title: "Prepare product meeting",
-    date: "2021-01-14",
-    column_id: 4,
-    user_id: 1
-  },
-  {
-    title: "Design discount code for checkout page",
-    date: "2021-01-12",
-    tag: "Design",
-    column_id: 4,
-    user_id: 1
-  }
-]
-
 columns.each do |column|
   Column.create(label: column[:label], value: column[:value])
 end
@@ -163,6 +71,98 @@ end
 users.each do |user|
   User.create(label: user[:label], value: user[:value])
 end
+
+cards = [
+  {
+    title: "Add discount code to checkout page",
+    date: "2020-12-14",
+    tag: "Feature Request",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Provide documentation on integrations",
+    date: "2021-01-12",
+    tag: "Backend",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Design shopping cart dropdown",
+    date: "2021-01-09",
+    tag: "Design",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Test checkout flow",
+    date: "2021-09-15",
+    tag: "QA",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Design wishlist overview",
+    date: "2021-01-09",
+    tag: "Design",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Add paypal as a payment provider",
+    date: "2021-01-14",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Update documentation on products endpoint",
+    date: "2021-01-19",
+    tag: "Backend",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Design products carousel",
+    date: "2021-01-10",
+    tag: "Design",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Add related products section",
+    date: "2021-01-14",
+    tag: "Feature Request",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Design wishlist dropdown",
+    date: "2021-01-09",
+    tag: "Design",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Add new properties to products endpoint",
+    date: "2021-01-14",
+    tag: "Backend",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Prepare product meeting",
+    date: "2021-01-14",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  },
+  {
+    title: "Design discount code for checkout page",
+    date: "2021-01-12",
+    tag: "Design",
+    column_id: Column.find_by(value: columns.sample[:value])[:id],
+    user_id: User.find_by(label: users.sample[:label])[:id]
+  }
+]
 
 cards.each do |card|
   Card.create(title: card[:title], date: card[:date], tag: card[:tag], column_id: card[:column_id], user_id: card[:user_id])
